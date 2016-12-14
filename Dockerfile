@@ -11,8 +11,4 @@ ENV APP_ROOT /lirong
 
 RUN mkdir $APP_ROOT
 WORKDIR $APP_ROOT
-ADD . $APP_ROOT
-ADD ./config/lirong /root/.ssh/id_rsa
-RUN chmod 0600 /root/.ssh/id_rsa
-ADD ./config/known_hosts /root/.ssh/known_hosts
 RUN /bin/bash -l -c "bundle install"
